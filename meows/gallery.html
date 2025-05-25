@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, rgb(173, 49, 255), rgb(47, 171, 209), rgb(24, 107, 231), rgb(213, 1, 255));
+      margin: 0;
+      height: 150vh;
+      padding: 0;
+      color: white;
+    }
+  
+    .galleryRow {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .thumbnail {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .thumbnail img {
+      width: 150px;
+      height: 150px;
+      border:2px solid;
+      color: #000;
+      cursor: pointer;
+    }
+
+    .thumbnail img:hover {
+      border-color: blue;
+    }
+
+    #changeFontButton, #changeBackgroundColorButton, #resetButton {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    nav {
+      background-color: #555;
+      color: #fff;
+      text-align:justify;
+      padding: 1px;
+      height: 225px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0px;
+        transition: background-color 0.3s;
+        margin: 0 5px;
+        display: inline-block;
+        width: 60px;
+    }
+
+    nav a:hover {
+        background-color: #777;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 150px auto 20px;
+        padding: 20px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #555;
+      min-width: 160px;
+      z-index: 100;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #777;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    h1 {
+      margin-top: 235px;
+    }
+
+    .logo {
+      max-width: 200px;
+      max-height: 100px;
+      width: auto;
+      height: auto;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+
+  </style>
+
+</head>
+
+<body>
+  <img src="https://w1996050.users.ecs.westminster.ac.uk/meows/logo.PNG" alt="Logo" class="logo">
+  
+  <nav>
+      <div class="container">
+          <a href="https://w1996050.users.ecs.westminster.ac.uk/meows/home.html" target="_blank">Home</a>
+          <a href="https://w1996050.users.ecs.westminster.ac.uk/meows/team.html" target="_blank">Team Members</a>
+          <a href="https://w1990052.users.ecs.westminster.ac.uk/meows/gallery.html" target="_blank">Gallery</a>
+          <a href="https://w1978643.users.ecs.westminster.ac.uk/meows/shop.html" target="_blank">Shop</a>
+          <a href="https://w1996050.users.ecs.westminster.ac.uk/meows/profile.html" target="_blank">User Profile</a>
+          <a href="https://w1990052.users.ecs.westminster.ac.uk/meows/sitemap.html" target="_blank">Sitemap</a>
+          <a href="https://w2020526.users.ecs.westminster.ac.uk/meows/feedback.html" target="_blank">Feedback Page</a>
+          <div class="dropdown">
+              <a href="#" class="dropbtn">Content Page</a>
+              <div class="dropdown-content">
+                  <a href="https://w1978643.users.ecs.westminster.ac.uk/meows/content_ST1.html" target="_blank">Option 1</a>
+                  <a href="https://w2020526.users.ecs.westminster.ac.uk/meows/content_ST2.html" target="_blank">Option 2</a>
+                  <a href="https://w1996050.users.ecs.westminster.ac.uk/meows/content_ST3.html" target="_blank">Option 3</a>
+                  <a href="https://w1990052.users.ecs.westminster.ac.uk/meows/content_ST4.html" target="_blank">Option 4</a>
+              </div>
+          </div>
+          <div class="dropdown">
+              <a href="#" class="dropbtn">Page Editors</a>
+              <div class="dropdown-content">
+                  <a href="https://w1978643.users.ecs.westminster.ac.uk/meows/pageEditor_ST1.html" target="_blank">Editor 1</a>
+                  <a href="https://w2020526.users.ecs.westminster.ac.uk/meows/pageEditor_ST2.html" target="_blank">Editor 2</a>
+                  <a href="https://w1996050.users.ecs.westminster.ac.uk/meows/pageEditor_ST3.html" target="_blank">Editor 3</a>
+                  <a href="https://w1990052.users.ecs.westminster.ac.uk/meows/pageEditor_ST4.html" target="_blank">Editor 4</a>
+              </div>
+          </div>
+      </div>
+  </nav>
+  
+  <h1>Gallery</h1>
+
+  <div class="galleryRow">
+
+    <div class="thumbnail" onclick="extendImg('https://w1990052.users.ecs.westminster.ac.uk/meows/galleryImages/teacher.png', 'The development of teachers is essential to the quality of education as having more professional and experienced teachers will greatly improve the quality of learning for students.')">
+      <img src="https://w1990052.users.ecs.westminster.ac.uk/meows/galleryImages/teacher.png" alt="Teacher">
+    </div>
+    
+    <div class="thumbnail" onclick="extendImg('https://w1990052.users.ecs.westminster.ac.uk/meows/galleryImages/eliminateDiscrimination.png', 'To achieve quality education, the inclusion of all individuals is required, regardless of race, gender, or disability.')">
+      <img src="https://w1990052.users.ecs.westminster.ac.uk/meows/galleryImages/eliminateDiscrimination.png" alt="Eliminate Discrimination">
+    </div>
+
+    <div class="thumbnail" onclick="extendImg('https://w1990052.users.ecs.westminster.ac.uk/meows/galleryImages/skills.PNG', 'Quality education requires students to gain skills, including technical and vocational skills, which will improve their career prospects and allow them to succeed in their chosen careers.')">
+      <img src="https://w1990052.users.ecs.westminster.ac.uk/meows/galleryImages/skills.PNG" alt="Skills">
+    </div>
+
+    <div class="thumbnail" onclick="extendImg('https://w1990052.users.ecs.westminster.ac.uk/meows/galleryImages/improvement.jpg', 'Through implementing improvements in weaker or less developed areas of education, and assessing their impacts, positive progress within improving the quality of education can be made.')">
+      <img src="https://w1990052.users.ecs.westminster.ac.uk/meows/galleryImages/improvement.jpg" alt="Improvement">
+    </div>
+
+
+  </div>
+
+  <div id="extendedImgWindow">
+    <img id="extendedImg" src="https://w1990052.users.ecs.westminster.ac.uk/meows/galleryImages/placeholder.jpg" alt="Extended Image">
+    <p id="description"></p>
+  </div>
+
+  <button id="changeFontButton" onclick="changeFontSize('20px')">Change Font</button>
+  <button id="changeBackgroundColorButton" onclick="changeBackgroundColor()">Change Background Color</button>
+  <button id="resetButton" onclick="resetStyles()">Reset Styles</button>
+
+  <div class="LinkToPageEditor">
+    <a href="https://w1990052.users.ecs.westminster.ac.uk/meows/pageEditor_ST4.html" target="_blank" style="text-align:center;">Link to Page Editor</a>
+  </div>
+
+  <script>
+    function extendImg(image, description) {
+      document.getElementById('extendedImg').src = image;
+      document.getElementById('description').textContent = description;
+    }
+
+    let cont = document.getElementById("description");
+    function changeFontSize(size) {
+      cont.style.fontSize = size;
+    }
+
+    function changeBackgroundColor() {
+      let colors = ['red', 'green', 'blue'];
+      let randomColor = Math.floor(Math.random() * colors.length);
+      document.body.style.background = colors[randomColor];
+    }
+
+    function resetStyles() {
+      cont.style.fontSize = '16px';
+      document.body.style.background = 'linear-gradient(135deg, rgb(173, 49, 255), rgb(47, 171, 209), rgb(24, 107, 231), rgb(213, 1, 255))';
+    }
+    
+
+  </script>
+
+</body>
+
+</html>
